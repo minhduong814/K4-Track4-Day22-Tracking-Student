@@ -1,0 +1,17 @@
+C:\Users\duong\miniconda3\envs\cv_robotics_lab21\Lib\site-packages\boxmot\utils\checks.py:5: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+[32m2026-10-09 11:21:53.250[0m | [32m[1mSUCCESS [0m | [36mboxmot.appearance.reid_model_factory[0m:[36mload_pretrained_weights[0m:[36m207[0m - [32m[1mSuccessfully loaded pretrained weights from "osnet_x0_25_msmt17.pt"[0m
+[32m2026-10-09 11:21:53.250[0m | [33m[1mWARNING [0m | [36mboxmot.appearance.reid_model_factory[0m:[36mload_pretrained_weights[0m:[36m211[0m - [33m[1mThe following layers are discarded due to unmatched keys or layer size: ('classifier.weight', 'classifier.bias')[0m
+[nạp mô hình] detector=yolo26n.pt imgsz=640 tracker=botsort
+              tracker này dùng Re-ID: osnet_x0_25_msmt17.pt (tự tải nếu chưa có)
+[video_5] Đã xử lý 100 frame
+[video_5] Đã xử lý 200 frame
+[video_5] Đã xử lý 300 frame
+[video_5] Đã xử lý 400 frame
+[video_5] Đã xử lý 500 frame
+[video_5] Đã xử lý 600 frame
+[video_5] Đã xử lý 700 frame
+
+[video_5] tracker=botsort conf=0.15 iou=0.5 -> 750 frame trong 109.4s (6.9 FPS)
+  File nộp bài: runs\nop_bai\video_5.txt
+  Video xem thử: runs\nop_bai\video_5_preview.mp4

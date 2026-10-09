@@ -1,0 +1,93 @@
+Error importing BURST due to missing underlying dependency: No module named 'pycocotools'
+
+Eval Config:
+USE_PARALLEL         : False                         
+NUM_PARALLEL_CORES   : 8                             
+BREAK_ON_ERROR       : True                          
+RETURN_ON_ERROR      : False                         
+LOG_ON_ERROR         : D:\VinAI\Labs\K4-Track4-Day22-Tracking-Student\TrackEval\error_log.txt
+PRINT_RESULTS        : True                          
+PRINT_ONLY_COMBINED  : False                         
+PRINT_CONFIG         : True                          
+TIME_PROGRESS        : True                          
+DISPLAY_LESS_PROGRESS : False                         
+OUTPUT_SUMMARY       : True                          
+OUTPUT_EMPTY_CLASSES : True                          
+OUTPUT_DETAILED      : True                          
+PLOT_CURVES          : True                          
+
+MotChallenge2DBox Config:
+PRINT_CONFIG         : True                          
+GT_FOLDER            : TrackEval\data\gt\mot_challenge
+TRACKERS_FOLDER      : TrackEval\data\trackers\mot_challenge
+OUTPUT_FOLDER        : None                          
+TRACKERS_TO_EVAL     : ['DK_video1']                 
+CLASSES_TO_EVAL      : ['pedestrian']                
+BENCHMARK            : LAB_TRACKING                  
+SPLIT_TO_EVAL        : train                         
+INPUT_AS_ZIP         : False                         
+DO_PREPROC           : True                          
+TRACKER_SUB_FOLDER   : data                          
+OUTPUT_SUB_FOLDER    :                               
+TRACKER_DISPLAY_NAMES : None                          
+SEQMAP_FOLDER        : None                          
+SEQMAP_FILE          : None                          
+SEQ_INFO             : {'video_1': None}             
+GT_LOC_FORMAT        : {gt_folder}/{seq}/gt/gt.txt   
+SKIP_SPLIT_FOL       : False                         
+
+CLEAR Config:
+METRICS              : ['HOTA', 'CLEAR', 'Identity'] 
+THRESHOLD            : 0.5                           
+PRINT_CONFIG         : True                          
+
+Identity Config:
+METRICS              : ['HOTA', 'CLEAR', 'Identity'] 
+THRESHOLD            : 0.5                           
+PRINT_CONFIG         : True                          
+
+Evaluating 1 tracker(s) on 1 sequence(s) for 1 class(es) on MotChallenge2DBox dataset using the following metrics: HOTA, CLEAR, Identity, Count
+
+
+Evaluating DK_video1
+
+    MotChallenge2DBox.get_raw_seq_data(DK_video1, video_1)                 0.2413 sec
+    MotChallenge2DBox.get_preprocessed_seq_data(pedestrian)                0.2328 sec
+    HOTA.eval_sequence()                                                   0.2604 sec
+    CLEAR.eval_sequence()                                                  0.0640 sec
+    Identity.eval_sequence()                                               0.0258 sec
+    Count.eval_sequence()                                                  0.0000 sec
+1 eval_sequence(video_1, DK_video1)                                      0.8279 sec
+
+All sequences for DK_video1 finished in 0.83 seconds
+
+HOTA: DK_video1-pedestrian         HOTA      DetA      AssA      DetRe     DetPr     AssRe     AssPr     LocA      OWTA      HOTA(0)   LocA(0)   HOTALocA(0)
+video_1                            28.594    18.33     45.06     19.541    68.073    47.611    82.41     82.578    29.575    35.085    73.324    25.726    
+COMBINED                           28.594    18.33     45.06     19.541    68.073    47.611    82.41     82.578    29.575    35.085    73.324    25.726    
+
+CLEAR: DK_video1-pedestrian        MOTA      MOTP      MODA      CLR_Re    CLR_Pr    MTR       PTR       MLR       sMOTA     CLR_TP    CLR_FN    CLR_FP    IDSW      MT        PT        ML        Frag      
+video_1                            16.528    80.73     16.694    22.701    79.078    12.903    20.968    66.129    12.153    4218      14363     1116      31        8         13        41        90        
+COMBINED                           16.528    80.73     16.694    22.701    79.078    12.903    20.968    66.129    12.153    4218      14363     1116      31        8         13        41        90        
+
+Identity: DK_video1-pedestrian     IDF1      IDR       IDP       IDTP      IDFN      IDFP      
+video_1                            27.865    17.932    62.467    3332      15249     2002      
+COMBINED                           27.865    17.932    62.467    3332      15249     2002      
+
+Count: DK_video1-pedestrian        Dets      GT_Dets   IDs       GT_IDs    
+video_1                            5334      18581     63        62        
+COMBINED                           5334      18581     63        62        
+
+Timing analysis:
+MotChallenge2DBox.get_raw_seq_data                                     0.2413 sec
+MotChallenge2DBox.get_preprocessed_seq_data                            0.2328 sec
+HOTA.eval_sequence                                                     0.2604 sec
+CLEAR.eval_sequence                                                    0.0640 sec
+Identity.eval_sequence                                                 0.0258 sec
+Count.eval_sequence                                                    0.0000 sec
+eval_sequence                                                          0.8279 sec
+Evaluator.evaluate                                                     2.9742 sec
+Đang chấm video luyện:
+  C:\Users\duong\miniconda3\envs\cv_robotics_lab21\python.exe -c import sys, runpy, numpy as np; np.float = float; np.int = int; script = sys.argv.pop(1); sys.argv[0] = script; runpy.run_path(script, run_name='__main__') TrackEval\scripts\run_mot_challenge.py --GT_FOLDER TrackEval\data\gt\mot_challenge --TRACKERS_FOLDER TrackEval\data\trackers\mot_challenge --BENCHMARK LAB_TRACKING --SPLIT_TO_EVAL train --SEQ_INFO video_1 --TRACKERS_TO_EVAL DK_video1 --METRICS HOTA CLEAR Identity --USE_PARALLEL False
+
+
+Đọc bảng phía trên: HOTA cân bằng phát hiện và giữ danh tính; MOTA phạt số lần đổi ID; IDF1 nhạy với track dài bị gán sai ID. Dùng các số này cho video_1 trong báo cáo. Không có bảng số cho video khác.

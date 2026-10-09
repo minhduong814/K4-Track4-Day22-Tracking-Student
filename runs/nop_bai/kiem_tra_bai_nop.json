@@ -1,0 +1,52 @@
+{
+  "video_1": {
+    "so_frame_nguon": 600,
+    "so_frame_preview": 600,
+    "so_dong_ket_qua": 5617,
+    "so_frame_co_track": 600,
+    "frame_cuoi_co_track": 600,
+    "so_id": 69,
+    "dinh_dang_mot_hop_le": true,
+    "preview_giai_ma_duoc": true
+  },
+  "video_2": {
+    "so_frame_nguon": 1050,
+    "so_frame_preview": 1050,
+    "so_dong_ket_qua": 13339,
+    "so_frame_co_track": 1050,
+    "frame_cuoi_co_track": 1050,
+    "so_id": 70,
+    "dinh_dang_mot_hop_le": true,
+    "preview_giai_ma_duoc": true
+  },
+  "video_3": {
+    "so_frame_nguon": 837,
+    "so_frame_preview": 837,
+    "so_dong_ket_qua": 5489,
+    "so_frame_co_track": 837,
+    "frame_cuoi_co_track": 837,
+    "so_id": 173,
+    "dinh_dang_mot_hop_le": true,
+    "preview_giai_ma_duoc": true
+  },
+  "video_4": {
+    "so_frame_nguon": 900,
+    "so_frame_preview": 900,
+    "so_dong_ket_qua": 5729,
+    "so_frame_co_track": 900,
+    "frame_cuoi_co_track": 900,
+    "so_id": 68,
+    "dinh_dang_mot_hop_le": true,
+    "preview_giai_ma_duoc": true
+  },
+  "video_5": {
+    "so_frame_nguon": 750,
+    "so_frame_preview": 750,
+    "so_dong_ket_qua": 3481,
+    "so_frame_co_track": 748,
+    "frame_cuoi_co_track": 750,
+    "so_id": 84,
+    "dinh_dang_mot_hop_le": true,
+    "preview_giai_ma_duoc": true
+  }
+}

@@ -10,9 +10,9 @@ Detector cố định: `yolo26n.pt`, ảnh 640 px, chỉ lớp người. Re-ID c
 
 ## 1. Cấu hình đã chọn
 
-Mỗi video được thử trên cùng 150 frame đầu với ByteTrack và BoT-SORT. Với BoT-SORT, giữ `iou=0.5` để thử riêng `conf=0.15/0.3/0.5`, rồi giữ `conf=0.3` để thử riêng `iou=0.4/0.5/0.7`. Video_4 được thử thêm bốn cấu hình ByteTrack theo cùng cách vì xuất hiện hộp trùng ở BoT-SORT. Các lượt thử và video có ID nằm trong `runs/thu_nghiem/`; bản nộp dùng toàn bộ chuỗi ảnh, không có `--max-frames`.
+Mỗi video được thử trên cùng 150 frame đầu với ByteTrack và BoT-SORT. Với BoT-SORT, giữ `iou=0.5` để thử riêng `conf=0.15/0.3/0.5`, rồi giữ `conf=0.3` để thử riêng `iou=0.4/0.5/0.7`. Video_4 được thử thêm bốn cấu hình ByteTrack theo cùng cách vì xuất hiện hộp trùng ở BoT-SORT. Kết quả TXT và nhật ký các lượt thử nằm trong [`runs/thu_nghiem/`](../runs/thu_nghiem/); bản nộp trong [`runs/nop_bai/`](../runs/nop_bai/) dùng toàn bộ chuỗi ảnh, không có `--max-frames`. Các file này được đưa lên GitHub; video preview chỉ lưu tại máy. Các bảng chấm được xuất sang [`runs/minh_chung/`](../runs/minh_chung/) để đọc kết quả mà không cần thư mục cài TrackEval.
 
-Quan sát được đối chiếu tại frame 30/90/150 của các lượt thử và các mốc của bản đủ frame. Đây là đánh giá bằng mắt trên những đoạn kiểm tra, không phải phép đo danh tính toàn bộ video_2–video_5.
+Quan sát được đối chiếu tại frame 30/90/150 của các lượt thử và các mốc của bản đủ frame. Đây là đánh giá bằng mắt trên những đoạn kiểm tra, không phải phép đo danh tính toàn bộ video_2–video_5. Ảnh đối chiếu các cấu hình: [video_1](../runs/video_1_so_sanh.jpg), [video_2](../runs/video_2_so_sanh.jpg), [video_3](../runs/video_3_so_sanh.jpg), [video_4](../runs/video_4_so_sanh.jpg), [video_5](../runs/video_5_so_sanh.jpg).
 
 | Video | Tracker | conf | iou | Quan sát khi xem video | Đã thử nhưng loại |
 |---|---|---|---|---|---|
@@ -34,7 +34,7 @@ Trong các lượt giữ nguyên tracker/conf, các file kết quả khi đổi 
 | video_4 | 900 | 5729 |
 | video_5 | 750 | 3481 |
 
-Tổng cộng **4.137 frame**. Năm file TXT có 10 cột MOT hợp lệ, ID/frame là số nguyên và không lặp cùng ID trong một frame; cả năm preview giải mã được ở đầu/giữa/cuối và có đúng số frame nguồn. Video_5 có hai frame không có track nên không có dòng kết quả cho chúng; preview vẫn đủ 750 frame. Đã chạy **7 unit test: tất cả thành công**; `git diff --check` cũng thành công. Cấu hình và biên bản kiểm tra nằm trong `runs/nop_bai/cau_hinh.json` và `runs/nop_bai/kiem_tra_bai_nop.json`.
+Tổng cộng **4.137 frame**. Năm file TXT có 10 cột MOT hợp lệ, ID/frame là số nguyên và không lặp cùng ID trong một frame; cả năm preview giải mã được ở đầu/giữa/cuối và có đúng số frame nguồn. Video_5 có hai frame không có track nên không có dòng kết quả cho chúng; preview vẫn đủ 750 frame. Đã chạy **7 unit test: tất cả thành công**; `git diff --check` cũng thành công. Cấu hình và biên bản kiểm tra nằm trong [`cau_hinh.json`](../runs/nop_bai/cau_hinh.json) và [`kiem_tra_bai_nop.json`](../runs/nop_bai/kiem_tra_bai_nop.json). Ảnh kiểm tra các mốc đầu/giữa/cuối: [`kiem_tra_full_frame.jpg`](../runs/kiem_tra_full_frame.jpg).
 
 ## 2. Số liệu video_1
 
@@ -48,7 +48,7 @@ video_1    28.594   16.528   27.865
 COMBINED   28.594   16.528   27.865
 ```
 
-Các giá trị được lấy từ output HOTA / CLEAR / Identity của TrackEval, nhật ký đầy đủ: [`runs/video_1_danh_gia.log`](../runs/video_1_danh_gia.log).
+Các giá trị được lấy từ output HOTA / CLEAR / Identity của TrackEval, nhật ký đầy đủ: [`runs/video_1_danh_gia.log`](../runs/video_1_danh_gia.log). Bảng gốc: [bản nộp](../runs/minh_chung/DK_video1_summary.txt), [baseline đủ frame](../runs/minh_chung/DK_baseline_full_summary.txt), [nhật ký baseline](../runs/video_1_baseline_danh_gia.log).
 
 | Cấu hình đủ 600 frame | HOTA | MOTA | IDF1 | TP | FN | FP | IDSW |
 |---|---:|---:|---:|---:|---:|---:|---:|

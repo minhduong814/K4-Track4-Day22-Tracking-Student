@@ -1,0 +1,16 @@
+C:\Users\duong\miniconda3\envs\cv_robotics_lab21\Lib\site-packages\boxmot\utils\checks.py:5: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+[nạp mô hình] detector=yolo26n.pt imgsz=640 tracker=bytetrack
+[video_4] Đã xử lý 100 frame
+[video_4] Đã xử lý 200 frame
+[video_4] Đã xử lý 300 frame
+[video_4] Đã xử lý 400 frame
+[video_4] Đã xử lý 500 frame
+[video_4] Đã xử lý 600 frame
+[video_4] Đã xử lý 700 frame
+[video_4] Đã xử lý 800 frame
+[video_4] Đã xử lý 900 frame
+
+[video_4] tracker=bytetrack conf=0.3 iou=0.5 -> 900 frame trong 79.4s (11.3 FPS)
+  File nộp bài: runs\nop_bai\video_4.txt
+  Video xem thử: runs\nop_bai\video_4_preview.mp4

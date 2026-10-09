@@ -1,0 +1,47 @@
+{
+  "video_2": {
+    "tracker": "botsort",
+    "conf": 0.15,
+    "iou": 0.5,
+    "device": "cuda:0",
+    "so_frame": 1050,
+    "fps_preview": 20,
+    "thoi_gian_ca_tien_trinh_giay": 214.48
+  },
+  "video_3": {
+    "tracker": "botsort",
+    "conf": 0.15,
+    "iou": 0.5,
+    "device": "cuda:0",
+    "so_frame": 837,
+    "fps_preview": 20,
+    "thoi_gian_ca_tien_trinh_giay": 120.85
+  },
+  "video_1": {
+    "tracker": "botsort",
+    "conf": 0.15,
+    "iou": 0.5,
+    "device": "cuda:0",
+    "so_frame": 600,
+    "fps_preview": 30,
+    "thoi_gian_xu_ly_giay": 111.6
+  },
+  "video_4": {
+    "tracker": "bytetrack",
+    "conf": 0.3,
+    "iou": 0.5,
+    "device": "cuda:0",
+    "so_frame": 900,
+    "fps_preview": 20,
+    "thoi_gian_ca_tien_trinh_giay": 95.22
+  },
+  "video_5": {
+    "tracker": "botsort",
+    "conf": 0.15,
+    "iou": 0.5,
+    "device": "cuda:0",
+    "so_frame": 750,
+    "fps_preview": 20,
+    "thoi_gian_ca_tien_trinh_giay": 119.97
+  }
+}

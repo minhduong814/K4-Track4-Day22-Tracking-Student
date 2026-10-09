@@ -1,5 +1,14 @@
 lab_data/
-runs/
+# Giữ kết quả nộp và minh chứng nhỏ; bỏ video, tệp cài đặt và tệp tạm.
+runs/**
+!runs/*.log
+!runs/*_so_sanh.jpg
+!runs/kiem_tra_full_frame.jpg
+!runs/nop_bai/
+!runs/nop_bai/*.txt
+!runs/nop_bai/*.json
+!runs/nop_bai/*.log
+!runs/nop_bai/DK_bai_nop.zip
 TrackEval/
 *.pt
 __pycache__/
