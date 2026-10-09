@@ -26,6 +26,7 @@ from typing import Iterator, Tuple
 
 import cv2
 import numpy as np
+import torch
 from ultralytics import YOLO
 
 from boxmot.tracker_zoo import create_tracker, get_tracker_config
@@ -134,11 +135,12 @@ def run(args: argparse.Namespace) -> None:
     if args.tracker in USES_APPEARANCE:
         print(f"              tracker này dùng Re-ID: {REID_WEIGHTS.name} (tự tải nếu chưa có)")
     detector = YOLO(DETECTOR_WEIGHTS)
+    detector.to(args.device)
     tracker = create_tracker(
         tracker_type=args.tracker,
         tracker_config=get_tracker_config(args.tracker),
         reid_weights=REID_WEIGHTS,
-        device=args.device,
+        device=torch.device(args.device),
         half=False,
         per_class=False,
     )
@@ -180,6 +182,9 @@ def run(args: argparse.Namespace) -> None:
                     cv2.FONT_HERSHEY_SIMPLEX, 0.55, color, 2,
                 )
             writer.write(vis)
+
+        if n_frames % 100 == 0:
+            print(f"[{args.seq_name}] Đã xử lý {n_frames} frame", flush=True)
 
         if args.max_frames and n_frames >= args.max_frames:
             break
